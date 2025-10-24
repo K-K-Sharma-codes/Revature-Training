@@ -162,43 +162,206 @@ str1[:4]
 'hell'
 str1[-9:-5]
 'o th'
->>> str1[-10:-1:2]
+str1[-10:-1:2]
 'l hr '
->>> 
->>> 
->>> 
->>> str1
+
+
+
+str1
 'hello there !'
->>> str1.capitalize()
+str1.capitalize()
 'Hello there !'
->>> str1.upper()
+str1.upper()
 'HELLO THERE !'
->>> str1.count('h')
+str1.count('h')
 2
->>> str1.count('e')
+str1.count('e')
 3
->>> 
->>> 
->>> str1.endswith('!')
+
+
+str1.endswith('!')
 True
->>> str1.endswith('h')
+str1.endswith('h')
 False
->>> str1.find('t')
+str1.find('t')
 6
->>> str1.find('s')
+str1.find('s')
 -1
->>> str1.index('t')
+str1.index('t')
 6
->>> str1.index('s')
+str1.index('s')
 Traceback (most recent call last):
   File "<pyshell#82>", line 1, in <module>
     str1.index('s')
 ValueError: substring not found
->>> str1.encode('utf-8')
+str1.encode('utf-8')
 b'hello there !'
->>> str1.encode('utf-16')
+str1.encode('utf-16')
 b'\xff\xfeh\x00e\x00l\x00l\x00o\x00 \x00t\x00h\x00e\x00r\x00e\x00 \x00!\x00'
->>> str1.replace('o' , '0')
+str1.replace('o' , '0')
 'hell0 there !'
->>> str1.split()
+str1.split()
 ['hello', 'there', '!']
+numbers=[10, 20, 30]
+numbers
+[10, 20, 30]
+id(numbers)
+2647919452224
+numbers.append(40)
+numbers
+[10, 20, 30, 40]
+id(numbers)
+2647919452224
+numbers.append(40)
+numbers
+[10, 20, 30, 40, 40]
+numbers[2]
+30
+numbers[3]=100
+numbers
+[10, 20, 30, 100, 40]
+numbers.count(20)
+1
+numbers.index(100)
+3
+numbers.insert(2, 600)
+numbers
+[10, 20, 600, 30, 100, 40]
+numbers.remove(600)
+numbers
+[10, 20, 30, 100, 40]
+numbers.remove(60)
+Traceback (most recent call last):
+  File "<pyshell#104>", line 1, in <module>
+    numbers.remove(60)
+ValueError: list.remove(x): x not in list
+numbers.pop()
+40
+numbers.pop(-2)
+30
+numbers
+[10, 20, 100]
+numbers.reverse()
+numbers
+[100, 20, 10]
+numbers.sort()
+numbers
+[10, 20, 100]
+numbers.sort(reverse=True)
+numbers
+[100, 20, 10]
+numbers.extend()
+Traceback (most recent call last):
+  File "<pyshell#114>", line 1, in <module>
+    numbers.extend()
+TypeError: list.extend() takes exactly one argument (0 given)
+nums1=numbers
+id(nums1)
+2647919452224
+numbers.extend(nums)
+Traceback (most recent call last):
+  File "<pyshell#117>", line 1, in <module>
+    numbers.extend(nums)
+NameError: name 'nums' is not defined. Did you mean: 'num1'?
+numbers.clear()
+numbers
+[]
+tup1=(10, 20, 30)
+tup1
+(10, 20, 30)
+tup1[2]
+30
+tup1.count(10)
+1
+tup1.clear()
+Traceback (most recent call last):
+  File "<pyshell#124>", line 1, in <module>
+    tup1.clear()
+AttributeError: 'tuple' object has no attribute 'clear'
+tup1.index(20)
+1
+set1={22, 11, 33, 55, 9, 7}
+set1
+{33, 55, 22, 7, 9, 11}
+set1(2)
+Traceback (most recent call last):
+  File "<pyshell#128>", line 1, in <module>
+    set1(2)
+TypeError: 'set' object is not callable
+set1[2]
+Traceback (most recent call last):
+  File "<pyshell#129>", line 1, in <module>
+    set1[2]
+TypeError: 'set' object is not subscriptable
+set1.add(43)
+set1
+{33, 55, 22, 7, 9, 11, 43}
+set1
+{33, 55, 22, 7, 9, 11, 43}
+set2={100, 200, 300}
+set2
+{100, 300, 200}
+set1.union(set2)
+{33, 100, 7, 200, 9, 11, 43, 300, 22, 55}
+set3=set1.union(set2)
+set3
+{33, 100, 7, 200, 9, 11, 43, 300, 22, 55}
+set3.intersection(set2
+
+                  0
+                  
+SyntaxError: '(' was never closed
+set3.intersection(set2)
+                  
+{200, 100, 300}
+set4=set3.intersection(set2)
+                  
+set4
+                  
+{200, 100, 300}
+set5=set1.difference(set4)
+                  
+set5
+                  
+{33, 7, 9, 11, 43, 22, 55}
+>>> set1.discard(33)
+...                   
+>>> set1
+...                   
+{55, 22, 7, 9, 11, 43}
+>>> dic1={1:10, 2:20}
+...                   
+>>> dic1
+...                   
+{1: 10, 2: 20}
+>>> dict1[2]
+...                   
+Traceback (most recent call last):
+  File "<pyshell#150>", line 1, in <module>
+    dict1[2]
+NameError: name 'dict1' is not defined. Did you mean: 'dic1'?
+>>> dic1[2]
+...                   
+20
+>>> dic1[2]=200
+...                   
+>>> dic1
+...                   
+{1: 10, 2: 200}
+>>> dic2={'rno':'123' , 'name':'Krishna'}
+...                   
+>>> dic2
+...                   
+{'rno': '123', 'name': 'Krishna'}
+>>> dic2['rno']
+...                   
+'123'
+>>> dic2.keys
+...                   
+<built-in method keys of dict object at 0x00000268844DC800>
+>>> dic2.keys()
+...                   
+dict_keys(['rno', 'name'])
+>>> dic2.values()
+...                   
+dict_values(['123', 'Krishna'])
